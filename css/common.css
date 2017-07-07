@@ -1,0 +1,105 @@
+/* reset style */
+.header,.right_cont_title,.subcont_left_w {
+ font-family: 'NanumSquare','나눔스퀘어';
+ src: url(../font/NanumSquareR.eot);
+ src: url(../font/NanumSquareR.eot?#iefix) format('embedded-opentype'),
+      url(../font/NanumSquareR.woff) format('woff'),
+      url(../font/NanumSquareR.ttf) format('truetype');
+}
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+html {overflow-y:scroll;}
+body {line-height:1; min-width:1100px; font-family:'Nanum Gothic',sans-serif; color:#333;}
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,
+p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,
+img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,
+dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,
+thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,
+footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,
+audio,video {margin:0; padding:0; border:0; font-size:100%;}
+img {border:0; vertical-align:bottom;}
+table {border-collapse:collapse; border-spacing:0;}
+caption,th {text-align:left;}
+fieldset {border:0;}
+ol,ul {list-style:none;}
+button {background:none; border:0;}
+a {color:#333; text-decoration:none;}
+a:hover {text-decoration:underline;}
+.blind {z-index:-1; position:absolute; top:-999999em; left:-999999em; display:inline-block;.display:none; width:1px; height:1px; font-size:1px; line-height:1px;}
+.ir {zoom:-10; z-index:-1; position:relative; display:block;.display:none; width:100%; font-size:9px; text-align:center; .text-indent:-9999px; white-space:nowrap; overflow:hidden;}
+.icn {position:relative; display:inline-block; font:0/0 arial; overflow:hidden; vertical-align:middle; background-repeat:no-repeat; background-color:transparent; background-image:url('../img/set_icon.png');}
+
+/* 공통 클래스 */
+#wrap {background-color:#fff;}
+.wrap_main {position:relative; padding-bottom:100px;}
+[class^="continer_"] {.zoom:1;}
+[class^="inner_cont_"] {width:1220px; margin:0 auto;}
+.cont_title {display:block; text-align:center; height:60px; line-height:60px; font-size:50px; margin-bottom:50px;}
+
+
+/* 공통헤더 */
+.header {width:100%; }
+	.header_inner {overflow:hidden; position:relative; width:1220px; margin:0 auto;}
+  	.logo {float:left;}
+  	.main_gnb_list {float:right; overflow:hidden; margin-top:20px;}
+  		.mgl_cont {float:left;text-align:center;}
+  			.mgl_link { display:inline-block; padding:20px 15px; position:relative; color:#000; font-weight:bold; text-transform:uppercase;}
+  			.mgl_link:hover,.mgl_link:focus,.mgl_cont.current .mgl_link  {text-decoration:none; color:#000;}
+  			.mgl_cont.current .mgl_link,.mgl_cont:hover .mgl_link {text-decoration:underline;}
+  			.current .mgl_link .icn {display:block;}
+			/* .mgl_link .icn {display:none; content:''; position:absolute; left:20px; top:50%; margin-top:-13px; width:27px; height:27px; background-position:-60px 0;}*/
+	[class^="about_value_"] {float:left; width:22.75%;}
+	[class^="about_value_"]+[class^="about_value_"] {margin-left:3%;}
+	.about_vtitle {display:inline-block; padding:10px 0 15px; font-size:18px; font-weight:bold; text-transform:uppercase;}
+
+/* 메인 콘텐츠 */
+[class^="section_"] {}
+
+
+/*about영역*/
+.section_about {position:relative;}
+.inner_cont_about {.zoom:1; padding-top:150px; position:relative;}
+.inner_cont_about:after {display:block; content:''; clear:both;}
+	.about_visual {margin-top:-64px; position:absolute; left:0; top:50%; width:100%; min-width:1220px; text-align:center; color:#fff; }
+	[class^="info_about_"] {display:block; text-align:center; font-size:30px; line-height:32px;}
+	.info_about_name {margin-top:10px;}
+		[class^="info_sub_txt"] {display:block; font-size:12px; }
+		.info_sub_txt2 {display:inline-block; margin-top:20px; padding-top:10px; border-top:1px solid #ccc;}
+	.about_inner {position:relative; height:550px; background:url('../img/bg_img01.jpg') no-repeat fixed left bottom; background-size:cover;}
+			.about_list_w {padding-top:20px; font-size:14px; position:relative;}
+			.about_list_w:before {display:block; content:''; position:absolute; left:0; top:0; width:100%; height:1px; background-color:#ccc; }
+				.about_list {position:relative;}
+					.about_list>li {position:relative; padding-left:70px; margin-top:10px; line-height:20px;}
+					.about_list strong,.asl_inner strong {position:absolute; left:0; top:0; font-weight:normal;}
+						.about_sub_list {padding-left:0 !important;}
+							.asl_inner {magin-top:20px;}
+								.asl_inner>li {position:relative; padding-left:80px;}
+
+.profile_img {position:absolute; left:50%; top:-100px; margin-left:-100px; width:200px; height:200px; border-radius:50%; background-color:green;}
+
+
+/*career영역*/
+.section_career {margin-top:100px; padding:50px 0; background-color:#2A2A2A;color:#fff;}
+	.career_list {width:952px; margin:0 auto;}
+	.career_list:after {display:block; content:''; clear:both;}
+		.career_cont {float:left; margin:0 10px 50px; width:218px; height:332px; }
+				.career_link {display:block; position:relative; padding-top:224px; color:#fff;}
+				.career_link:hover {background-color:rgba(0,0,0,.3); text-decoration:none;}
+				.career_info_text {display:block; padding:10px; font-weight:normal; font-size:13px; line-height:16px;}
+					.career_info_text>[class^="cit_"] {display:block; margin-bottom:2px;}
+				.career_thumb {position:absolute; left:0; top:0; width:100%; height:224px; }
+	.btn_list_more {display:block; text-align:center; width:70%; margin:0 auto; padding:10px 0; color:#fff; font-size:18px; border:1px solid rgba(255,255,255,0.3); border-width:1px 0; cursor:pointer;}
+/*contact영역*/
+.section_contact {padding:50px 0; width:1220px; margin:0 auto; }
+	.contact_inner {overflow:hidden; width:1240px; position:relative; left:-10px;}
+		.section_contact [class^="cti_"] {float:left; width:588px; padding:10px; margin-left:10px; border:1px solid #BFBFBF;}
+		.cti_info {padding-bottom:80px !important;}
+			.ctii_cont {position:relative; padding-left:100px; margin-top:10px;}
+				.ctii_value {position:absolute; left:0; top:0; }
+		.cti_message {}
+			[class^="form_section"] {display:block; position:relative; margin-top:10px; padding-left:100px;}
+			[class^="form_section"]>label {position:absolute; left:0; top:0; }
+			[class^="form_section"]>input {height:25px; padding:0 10px; border:1px solid #BFBFBF;}
+			.btn_send {display:inline-block; padding:3px 10px; cursor:pointer; background-color:#1acbc5; border:0; color:#fff; font-weight:normal; font-size:18px; text-transform: uppercase;}
+
+/*footer영역*/
+.footer {position:absolute; left:0; bottom:30px; width:100%; height:40px; text-align:center; line-height:18px;}
