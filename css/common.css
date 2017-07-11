@@ -37,7 +37,7 @@ a:hover {text-decoration:underline;}
 
 
 /* 공통헤더 */
-.header {width:100%; }
+.header {width:100%; position:fixed; background-color:#fff; z-index:3; border-bottom:1px solid #dedede;}
 	.header_inner {overflow:hidden; position:relative; width:1220px; margin:0 auto;}
   	.logo {float:left;}
   	.main_gnb_list {float:right; overflow:hidden; margin-top:20px;}
@@ -59,12 +59,13 @@ a:hover {text-decoration:underline;}
 .section_about {position:relative;}
 .inner_cont_about {.zoom:1; padding-top:150px; position:relative;}
 .inner_cont_about:after {display:block; content:''; clear:both;}
-	.about_visual {margin-top:-64px; position:absolute; left:0; top:50%; width:100%; min-width:1220px; text-align:center; color:#fff; }
+	.about_visual {margin-top:-64px; position:absolute; left:0; top:50%; z-index:1; width:100%; min-width:1220px; padding:10px 0; text-align:center; color:#fff; }
 	[class^="info_about_"] {display:block; text-align:center; font-size:30px; line-height:32px;}
 	.info_about_name {margin-top:10px;}
 		[class^="info_sub_txt"] {display:block; font-size:12px; }
 		.info_sub_txt2 {display:inline-block; margin-top:20px; padding-top:10px; border-top:1px solid #ccc;}
-	.about_inner {position:relative; height:550px; background:url('../img/bg_img01.jpg') no-repeat fixed left bottom; background-size:cover;}
+	.about_inner {position:relative; padding-top:78px; height:750px; background:url('../img/bg_img01.jpg') no-repeat fixed left bottom; background-size:cover;}
+	.about_inner:after {display:block; content:''; width:100%; height:100%; position:absolute; left:0; top:0; background:url('../img/mvisual_pattern.png') repeat left top;}
 			.about_list_w {padding-top:20px; font-size:14px; position:relative;}
 			.about_list_w:before {display:block; content:''; position:absolute; left:0; top:0; width:100%; height:1px; background-color:#ccc; }
 				.about_list {position:relative;}
@@ -79,27 +80,71 @@ a:hover {text-decoration:underline;}
 
 /*career영역*/
 .section_career {margin-top:100px; padding:50px 0; background-color:#2A2A2A;color:#fff;}
-	.career_list {width:952px; margin:0 auto;}
-	.career_list:after {display:block; content:''; clear:both;}
-		.career_cont {float:left; margin:0 10px 50px; width:218px; height:332px; }
-				.career_link {display:block; position:relative; padding-top:224px; color:#fff;}
-				.career_link:hover {background-color:rgba(0,0,0,.3); text-decoration:none;}
-				.career_info_text {display:block; padding:10px; font-weight:normal; font-size:13px; line-height:16px;}
-					.career_info_text>[class^="cit_"] {display:block; margin-bottom:2px;}
-				.career_thumb {position:absolute; left:0; top:0; width:100%; height:224px; }
+	.career_inner {height:735px; overflow:hidden;}
+	.career_inner.current {height:auto;}
+		.career_list {width:952px; margin:0 auto;}
+		.career_list:after {display:block; content:''; clear:both;}
+			.career_cont {float:left; margin:0 10px 50px; width:218px; height:332px; }
+					.career_link {display:block; position:relative; padding-top:224px; color:#fff;}
+					.career_link:hover {background-color:rgba(0,0,0,.3); text-decoration:none;}
+					.career_info_text {display:block; padding:10px; font-weight:normal; font-size:13px; line-height:16px;}
+						.career_info_text>[class^="cit_"] {display:block; margin-bottom:2px;}
+					.carrer_thumb_mask {display:block; position:absolute; left:0; top:0; width:218px; height:224px; overflow:hidden;}
+						.career_thumb {display:block; width:100%; height:224px;}
+						.career_thumb:hover {
+							image-rendering:-webkit-optimize-contrast;
+							transition:transform .2s cubic-bezier(.180,.84,.44,1),-webkit-transform .2s cubic-bezier(.180,.84,.44,1);
+							transition:-webkit-transform .2s cubic-bezier(.180,.84,.44,1);
+							transition:transform .2s cubic-bezier(.180,.84,.44,1);
+							transform:scale(1.03);
+							-webkit-transform:scale(1.03);
+							-ms-transform:scale(1.03);
+							transition-duration:.3s;
+						}
 	.btn_list_more {display:block; text-align:center; width:70%; margin:0 auto; padding:10px 0; color:#fff; font-size:18px; border:1px solid rgba(255,255,255,0.3); border-width:1px 0; cursor:pointer;}
 /*contact영역*/
 .section_contact {padding:50px 0; width:1220px; margin:0 auto; }
-	.contact_inner {overflow:hidden; width:1240px; position:relative; left:-10px;}
-		.section_contact [class^="cti_"] {float:left; width:588px; padding:10px; margin-left:10px; border:1px solid #BFBFBF;}
-		.cti_info {padding-bottom:80px !important;}
+	.contact_inner {overflow:hidden; width:1164px; position:relative;}
+		.section_contact [class^="cti_"] {float:left; width:580px; padding:10px; border:1px solid #d9d9d9;}
+		.cti_info {width:510px !important;}
 			.ctii_cont {position:relative; padding-left:100px; margin-top:10px;}
-				.ctii_value {position:absolute; left:0; top:0; }
-		.cti_message {}
+				.ctii_value {position:absolute; left:0; top:0; width:90px; text-align:right; }
+				.ctii_cont:last-child .ctii_value {top:10px;}
+					.sns_w {overflow:hidden; display:block;}
+						[class^="snsicon_"] {display:block; float:left; position:relative; width:60px; height:60px; background-repeat:no-repeat;}
+						[class^="snsicon_"]:hover {
+							transition:height 0.3s, background-color 0.3s, transform 0.3s;
+							-webkit-transition:height 0.5s, background-color 0.3s, -webkit-transform 0.3s;
+							-moz-transition:height 0.5s, background-color 0.3s,-moz-transform 0.3s;
+							-o-transition:height 0.5s, background-color 0.3s, -o-transform 0.3s;
+							-ms-transition:height 0.5s, background-color 0.3s,-moz-transform 0.3s;}
+						.snsicon_ig:hover {background-image:url('../img/sns_ig_bg.gif');}
+						.snsicon_fb:hover {background-color:#4A6D9D;}
+							[class^="snsicon_"]>.icn {display:block; position:absolute; left:50%; top:50%;}
+							[class^="snsicon_"]:hover>.icn{
+								transition:0.2s;
+								-webkit-transition:0.2s;
+								-moz-transition:0.2s;
+								-o-transition:0.2s;
+								-ms-transition:0.2s;}
+							.snsicon_ig .icn {margin:-20px 0 0 -20px; background-position:0 -45px; width:40px; height:40px; }
+							.snsicon_ig:hover>.icn {background-position:0 0;}
+							.snsicon_fb .icn {margin:-20px 0 0 -11px; width:22px; height:39px; background-position:-40px -45px;}
+							.snsicon_fb:hover .icn {background-position:-40px 0;}
+	.cti_message {margin-left:30px !important;}
+		.contact_form {position:relative; top:-5px;}
 			[class^="form_section"] {display:block; position:relative; margin-top:10px; padding-left:100px;}
-			[class^="form_section"]>label {position:absolute; left:0; top:0; }
-			[class^="form_section"]>input {height:25px; padding:0 10px; border:1px solid #BFBFBF;}
-			.btn_send {display:inline-block; padding:3px 10px; cursor:pointer; background-color:#1acbc5; border:0; color:#fff; font-weight:normal; font-size:18px; text-transform: uppercase;}
+			[class^="form_section"]>label {position:absolute; left:0; top:0; width:80px; text-align:right; font-weight:bold;}
+			[class^="form_section"]>input {height:25px; padding:0 10px; border:1px solid #d9d9d9;}
+			.message_box {display:block; padding:10px; resize:none; width:95%; height:200px !important; border-color:#d9d9d9;}
+			.btn_send {display:inline-block; position:absolute; left:300px; top:0; width:95px; height:65px; cursor:pointer; background-color:#D7D7D8; border:0; color:#fff; font-weight:normal; font-size:18px; text-transform: uppercase;}
+			.btn_send:hover {display:block;text-decoration:underline; background-color:#31B4E3; border-radius:5px;
+				transition:height 0.5s, background-color 0.5s, transform 0.3s;
+				-webkit-transition:height 0.5s, background-color 0.5s, -webkit-transform 0.3s;
+				-moz-transition:height 0.5s, background-color 0.5s,-moz-transform 0.3s;
+				-o-transition:height 0.5s, background-color 0.5s, -o-transform 0.3s;
+				-ms-transition:height 0.5s, background-color 0.5s,-moz-transform 0.3s;
+			}
 
 /*footer영역*/
-.footer {position:absolute; left:0; bottom:30px; width:100%; height:40px; text-align:center; line-height:18px;}
+.footer {position:absolute; left:0; bottom:30px; width:100%; height:40px; text-align:center; line-height:22px; font-size:14px; color:#999;}
