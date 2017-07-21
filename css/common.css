@@ -78,8 +78,7 @@ a:hover {text-decoration:underline;}
 
 /*career영역*/
 .section_career {margin-top:100px; padding:50px 0; background-color:#2A2A2A;color:#fff;}
-	.career_inner {height:735px; overflow:hidden;}
-	.career_inner.current {height:auto;}
+	.career_inner {overflow:hidden;}
 		.career_list {width:952px; margin:0 auto;}
 		.career_list:after {display:block; content:''; clear:both;}
 			.career_cont {float:left; margin:0 10px 50px; width:218px; height:332px; }

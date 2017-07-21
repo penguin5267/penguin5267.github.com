@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="author" content="">
-	<script src="./js/jquery-1.11.2.min.js"></script>
+	<script src="./js/lib/jquery-1.11.2.min.js"></script>
 	<script src="./js/action.js" defer ></script>
     <link rel="stylesheet" type="text/css" href="./css/common.css"  />
 </head>
@@ -20,13 +20,13 @@
 		<h2 class="blind">메인메뉴</h2>
 		<ul class="main_gnb_list">
 			<li class="mgl_cont">
-				<a href="#none" class="mgl_link">about us<span class="icn">선택</span></a>
+				<a href="javascript:moveSection(1);" class="mgl_link">about me<span class="icn">선택</span></a>
 			</li>
 			<li class="mgl_cont current">
-				<a href="#none" class="mgl_link">Career<span class="icn">선택</span></a>
+				<a href="javascript:moveSection(2);" class="mgl_link">works<span class="icn">선택</span></a>
 			</li>
 			<li class="mgl_cont">
-				<a href="#none" class="mgl_link">contact<span class="icn">선택</span></a>
+				<a href="javascript:moveSection(3);" class="mgl_link">contact<span class="icn">선택</span></a>
 			</li>
 		</ul>
 	</div>
@@ -35,7 +35,7 @@
 <!-- container -->
   <div class="continer_w">
     <!--about영역-->
-    <div class="section_about">
+    <div class="section_about" id="section1">
 		<div class="about_inner">
 			<div class="about_visual">
 				<span class="info_sub_txt">Markup/Front UI developer</span>
@@ -167,7 +167,7 @@
     <!--//end:about영역-->
 
     <!--career영역-->
-    <div class="section_career">
+    <div class="section_career" id="section2">
 		<h3 class="cont_title">Works</h3>
 		<div class="career_inner">
 			<ul class="career_list">
@@ -355,7 +355,7 @@
     <!--//end:career영역-->
 
     <!--contact영역-->
-    <div class="section_contact">
+    <div class="section_contact" id="section3">
 		<h3 class="cont_title">Contacts</h3>
 		<div class="contact_inner">
 			<div class="cti_info">
@@ -375,8 +375,8 @@
 					<li class="ctii_cont">
 						<strong class="ctii_value">SNS :</strong>
 						<span class="sns_w">
-							<a href="https://www.facebook.com/profile.php?id=100003558878013" target="_blank" class="snsicon_ig"><span class="icn"><i class="ir">인스타그램</i></span></a>
-							<a href="#" target="_blank" class="snsicon_fb"target="_blank" ><span class="icn"><i class="ir">페이스북</i></span></a>
+							<a href="#" target="_blank" class="snsicon_ig"><span class="icn"><i class="ir">인스타그램</i></span></a>
+							<a href="https://www.facebook.com/profile.php?id=100003558878013" target="_blank" class="snsicon_fb"target="_blank" ><span class="icn"><i class="ir">페이스북</i></span></a>
 						</span>
 					</li>
 
@@ -420,6 +420,10 @@
 <script type="text/javascript">
 	$(document).ready(function(){
         portfolioList();
+        snsAlert();
+        scrollMotion();
+        menuBar();
+        moveSection();
 	});
 </script>
 </body>
