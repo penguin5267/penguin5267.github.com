@@ -31,12 +31,14 @@ function portfolioList() {
     });
 }
 
+/*
 //sns인스타클릭시 안내팝업
 function snsAlert(){
     $(".snsicon_ig").on("click",function(){
         alert('Mobile에서만 접속가능합니다');
     });
 }
+*/
 
 //스크롤 모션
 function scrollMotion(){
